@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+body {
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* Utils */
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.no_show {
+  display: none;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+}
+
+.opaque {
+  opacity: .35;
+}
+
+.missing-data {
+  border: 1px solid #F00;
+}
+
+/* Structure */
+h1 {
+  color: #08c;
+  font-size: 1.75em;
+  font-weight: 300;
+  margin: 20px auto 10px auto;
+  text-align: center;
+  width: 100%
+}
+
+h3 {
+  color: #08c;
+  font-size: 1.05em;
+  font-weight: 400;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%
+}
+
+form {
+  box-sizing: border-box;
+  color: #868686;
+  font-size: 1.1em;
+  margin: 5px auto auto;
+  max-width: 600px;
+  width: 98%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+section:last-of-type {
+  margin-bottom: 5px;
+}
+.note {
+  font-size: .7em;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: rgba(238, 238, 238, 0.2);
+  border: 1px solid #eee;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #b8860b;
+  font-size: .75em;
+  font-weight: 400;
+  margin: 5px 0;
+  padding: 10px;
+  width: 99%;
+  -webkit-appearance: none;
+}
+
+input[type=radio] {
+  display: inline-block;
+  height: 15px;
+  padding: 0;
+  vertical-align: middle;
+  width: 15px;
+}
+
+input[type=radio]:checked {
+  background-color: #fff;
+  border: 5px solid #b8860b;
+
+}
+
+input[type=button] {
+  background: rgba(0, 136, 204, 0.75);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* Address Styles Related */
+.street { max-width: 83%; }
+.street_num { max-width: 15%; }
+.neighborhood {}
+.zipcode { max-width: 23%; }
+.city { max-width: 75%; }
+
+/* Cart */
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+li {
+  align-items: flex-start;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: .8em;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+li > * {
+  flex: 0 1 auto;
+  margin-right: 10px;
+}
+
+li > :last-child {
+  margin-right: 0;
+}
+
+li > div > span {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+li > div > span:first-of-type {
+  font-weight: 600;
+}
+
+.total_amount {
+  background-color: rgba(238, 238, 238, 0.2);
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.total_amount > span {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+  width: 49%;
+}
+
+.total_amount > span:last-of-type {
+  text-align: right;
+}
+
+.item_image {
+  height: auto;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.item_name {
+  min-width: 315px;
+}
+/* Payment */
+.cc_payment_data {
+  border-bottom: solid 1px #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.payment_icon {
+  height: auto;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.paypal_icon {
+  margin-left: -4px;
+  width: 50px;
+}
+
+@media (max-width: 767px) {
+
+  li {
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .item_name {
+    margin: 10px auto;
+    min-width: 100%;
+  }
+
+}

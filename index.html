@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Checkout Test</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3En5TuVadlvzEFy9On6cWuGXidUltxyg&v=3.28"></script>
+  </head>
+  <body>
+    <h1>YA CASI TERMINAMOS!</h1>
+    <h3>Por favor danos unos datos más para poder enviarte tus productos</h3>
+    <form id="orden_de_compra">
+      <section id="usr_details">
+          <label for="usr_name">Nombre</label>
+          <input class="block" type="text" name="user_name" placeholder="Escribe tu nombre">
+          <fieldset>
+            <label for="usr_address">Dirección</label>
+            <span class="block note"></span>
+            <input class="inlineBlock street" type="text" data-address="usr_street" name="usr_street" placeholder="Calle">
+            <input class="inlineBlock street_num" type="tel" data-address="usr_number" data-key="number" name="usr_number" placeholder="Número">
+            <input class="block neighborhood" type="text" data-address="usr_neighborhood" name="usr_neighborhood" placeholder="Colonia">
+            <input class="inlineBlock zipcode" type="text" data-address="usr_cp" data-key="number" name="usr_cp" placeholder="Código Postal">
+            <input class="inlineBlock city" type="text" data-address="usr_city" name="usr_city" placeholder="Ciudad">
+            <input class="inlineBlock state" type="text" data-address="usr_state" name="usr_state" placeholder="Estado">
+          </fieldset>
+          <label for="usr_phone">Teléfono</label>
+          <input type="tel" name="usr_phone" data-key="number" placeholder="000 000 0000">
+      </section>
+      <section id="usr_items">
+        <h3>PRODUCTOS</h3>
+        <ul id="cart_items">
+          <li>
+            <img class="item_image" src="images/asus_tablet_01.jpg" alt="ASUS ZenPad Z300M-A2-GR 16GB Negro">
+            <span class="item_name" data-name="">ASUS ZenPad Z300M-A2-GR 16GB Negro, Gris - Tablet (Tableta de tamaño completo, IEEE 802.11n, Android, Pizarra, Android 6.0, Negro, Gris)</span>
+            <div class="item_price_box">
+              <span>Precio</span>
+              <span class="item_price" data-price="3380.95">$3,380.95</span>
+            </div>
+            <div class="item_quant_box">
+              <span>Cantidad</span>
+              <span class="item_quantity" data-quantity="2">2</span>
+            </div>
+          </li>
+          <li>
+            <img class="item_image" src="images/lenovo_tablet_01.jpg" alt="Lenovo TAB3 Essential">
+            <span class="item_name">Lenovo TAB3 Essential - ZA0R0029US 7" Android Tablet</span>
+            <div class="item_price_box">
+              <span>Precio</span>
+              <span class="item_price">$1,495.31</span>
+            </div>
+            <div class="item_quant_box">
+              <span>Cantidad</span>
+              <span class="item_quantity">1</span>
+            </div>
+          </li>
+          <li>
+            <img class="item_image" src="images/action_figure_01.jpg" alt="Star Wars Figuras de Acción">
+            <span class="item_name" data-name="">Star Wars Figuras de Acción Star Wars Black Series, AT-AT Driver, 6"</span>
+            <div class="item_price_box">
+              <span>Precio</span>
+              <span class="item_price" data-price="449.00">$449.00</span>
+            </div>
+            <div class="item_quant_box">
+              <span>Cantidad</span>
+              <span class="item_quantity" data-quantity="1">1</span>
+            </div>
+          </li>
+          <div class="total_amount">
+            <span>Total:</span>
+            <span>$8,706.21</span>
+          </div>
+        </ul>
+      </section>
+      <section id="usr_payment">
+        <h3>SELECCIONA TU MÉTODO DE PAGO</h3>
+        <!-- CC -->
+        <label class="block" for="payment_cc">Tarjeta de Crédito</label>
+        <input type="radio" name="payment_type" data-payment="cc" value="">
+        <img class="payment_icon" data-type="visa" src="icons/visa.svg">
+        <img class="payment_icon" data-type="amex" src="icons/amex.svg">
+        <img class="payment_icon" data-type="mastercard" src="icons/mastercard.svg">
+        <!-- <div class="cc_payment_data no_show"> -->
+          <div class="cc_payment_data">
+          <label for="">Número de Tarjeta</label>
+          <input name="payment_cc" data-key="number" placeholder="•••• •••• •••• ••••">
+          <input name="cc_number" value="" hidden>
+          <label for="">Número de Seguridad</label>
+          <input name="payment_sc" data-key="number" placeholder="•••">
+          <label for="">Nombre del Titular</label>
+          <input name="payment_name">
+          <label for="">Mes</label>
+          <select name="payment_month">
+            <option selected disabled>MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+
+          <label for="">Año</label>
+          <select name="payment_year">
+            <option selected disabled>YY</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+        <!-- PayPal -->
+        <label class="block" for="payment_paypal">PayPal</label>
+        <input class="inlineBlock" type="radio" data-payment="paypal" name="payment_type" value="">
+        <img class="payment_icon paypal_icon" src="icons/PayPal2.svg">
+        <!-- Oxxo -->
+        <label class="block" for="payment_oxxo">Depósito en Oxxo</label>
+        <input type="radio" name="payment_type" data-payment="oxxo" value="">
+        <img class="payment_icon" src="icons/oxxo.svg">
+      </section>
+      <input type="button" name="pay_with_method" value="Pagar ahora">
+    </form>
+    
+    <script defer src="js/app.js" type="text/javascript"></script>
+
+  </body>
+</html>
